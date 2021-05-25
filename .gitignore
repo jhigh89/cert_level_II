@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+config.py
 
 # Spyder project settings
 .spyderproject
@@ -127,3 +128,23 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Robostuff
+testrun/
+output/
+venv/
+temp/
+.rpa/
+.idea/
+.ipynb_checkpoints/
+.virtual_documents/
+*/.ipynb_checkpoints/*
+.vscode
+.DS_Store
+*.pyc
+*.zip
+*.xlsx
+
+# used to get rid of orders.csv which would just clutter git
+
+*.csv 
