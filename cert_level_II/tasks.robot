@@ -36,11 +36,11 @@ Open Website for Orders
 
 *** Keywords ***
 Get Orders CSV From User
-    #Add Icon
-    #Add heading
-    #Add Text Input    CSV URL    csv_url
-    #Add Submit    Submit CSV    buttons=Yes,No    default=Yes
-    RPA.HTTP.Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
+    Add heading    URL for CSV File
+    Add Text Input    csv_url    label=CSV Url
+    Add submit buttons    submit,cancel
+    ${response}=    Run dialog
+    RPA.HTTP.Download    ${response.csv_url}    overwrite=True
     ${orders_as_table}=    Read Table From Csv    orders.csv
     [Return]    ${orders_as_table}
 
