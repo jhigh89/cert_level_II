@@ -17,7 +17,7 @@ Library    RPA.Dialogs
 *** Tasks ***
 Order Robots on RobotSpareBin Website With Receipts
     Open Website for Orders
-    ${orders}=    Get Orders CSV From User
+    ${orders}=    Get Orders CSV From User    # prompts user to provide URL for CSV
     FOR    ${order}    IN    @{orders}
         Sign Our Life Away
         Fill Out Form    ${order}
@@ -27,7 +27,6 @@ Order Robots on RobotSpareBin Website With Receipts
         Embed Screenshot in PDF Receipt    ${pdf}    ${screenshot}
         Order Another Robot
     END
-    # log out of website
     Create a Zip File
 
 *** Keywords ***

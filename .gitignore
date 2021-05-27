@@ -144,7 +144,8 @@ temp/
 *.pyc
 *.zip
 *.xlsx
-
+*.png
+*.pdf
 # used to get rid of orders.csv which would just clutter git
 
 *.csv 
